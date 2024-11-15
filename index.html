@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cityscape</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="slider()">
+    <header id="header" class="display_flex justify_content position_absolute">
+        <nav id="nav" class="display_flex space_between  center2">
+            <div id="logo position_absolute">
+                <img src="img/logo-default-169x34.png" alt="">
+            </div>
+            <div id="main position_absolute">
+                <ul  class="main_ul margin30px display_flex">
+                    <li>
+                        <a class="links a_hover" href="#" data-name="sliderS" onclick="sectionScroll(event)">home</a>
+                    </li>
+                    <li>
+                        <a class="links a_hover" href="#" data-name="about" onclick="sectionScroll(event)">about</a>
+                    </li>
+                    <li>
+                        <a class="links a_hover" href="#" data-name="services" onclick="sectionScroll(event)">our services</a>
+                    </li>
+                    <li>
+                        <a class="links a_hover" href="#" data-name="project" onclick="sectionScroll(event)">projects</a>
+                    </li>
+                    <li>
+                        <a class="links a_hover" href="#" data-name="contact" onclick="sectionScroll(event)">contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="contact position_absolute">
+                <div class="margin30px">
+                    <span><i class="contact_i fa-solid fa-mobile-screen-button"></i></span>
+                    <span><a href="" class="a_hover ffffff">1-300-123-1234</a></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="sliderS" class="slider position_relative  display_flex">
+        <div class="sliderLeftZero">
+            <div class="indexSpan position_absolute"><span id="indexSpan1"></span></div>
+            <div  id="sliderLeft" class="minImg position_absolute">
+
+            </div>
+        </div>
+        <div id="sliderRight" class="sliderRight position_relative">
+        </div>
+        <div id="slider_back" class="slider_back position_relative">
+            <div id="slider_min_back" class="slider_min_back position_absolute" >
+            </div>
+        </div>
+        <div id="heading" class="heading position_absolute ">
+            <div class="min_head"><h4 id="countrys"></h4></div>
+            <div class="big_head"><h2 id="city"></h2></div>
+            <div class="min_head"><h5 id="hotel"></h5></div>
+            <div class="head_button"><button>View Project <i class="fa-solid fa-chevron-right"></i></button></div>
+        </div>
+
+        <!--   onmouseover="clearInterval(sliderinter)" onmouseout="setInterval(sliderinter = sliderInterval,3000,false,'+1')"  -->
+        <!-- <div onmouseover="clearInterval(sliderinter)" onmouseout="setInterval(sliderinter = sliderInterval,3000,false,'+1')" class="arrow  position_absolute" >
+            <div class=" display_flex">
+                <div onclick="sliderInterval(true, '-1')" class="arrow_left arrow_slider"><i class="fa-solid fa-chevron-left"></i></div>
+                <div onclick="sliderInterval(true,'+1')" class="arrow_right arrow_slider"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+        </div> -->
+        <div  onmouseover="clearInterval(sliderinter)"  class="big_arrow position_absolute display_flex">
+            <div onclick="sliderInterval(true, '-1')" class="arrow_left arrow_slider"><i id="arrow_left" class="fa-solid fa-chevron-left"></i></div>
+            <div  onclick="sliderInterval(true,'+1')" class="arrow_right arrow_slider"><i id="arrow_right" class="fa-solid fa-chevron-right"></i></div>
+        </div>
+        <div id="arrow_line" class="arrow_line position_relativ position_absolute display_flex">
+            <div id="arrow_line_1" class="arrow_line_1 arrow_line_all position_absolute"></div>
+        </div>
+        <div class="slider_contact position_absolute">
+            <div class="slider_icon slider_icon_line display_flex">
+                <span>FOLLOW US</span>
+            </div>
+            <div class="slider_icon a_hover"><i class="fa-brands fa-facebook"></i></div>
+            <div class="slider_icon a_hover"><i class="fa-brands fa-x-twitter"></i></div>
+            <div class="slider_icon a_hover"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+    </div>
+    <section id="about" class="sectionJs about center paddingBottom">
+        <div class="display_flex">
+            <div class="about_text about_left" style="padding: 0px 100px 640px 0px;">
+                <div>
+                    <h6 class="color_yel">About us</h6>
+                </div>
+                <div class="position_relative">
+                    <div class="position_absolute left100 jscode">
+                        <div>
+                            <h2>We Turn Ideas Into Reality</h2>
+                        </div>
+                        <div>
+                            <p style="font-weight: 700;">We apply innovative design solutions to enhance people’s residential well-being and to help workplaces succeed & achieve more in the comfortable environments!</p>
+                        </div>
+                        <div>
+                            <p>All our team collaborates with our clients, across all of our 3 offices, which are located throughout the US. Our mission is to implement the outstanding design ideas and solutions for any project we’re working on. During that process, we carefully combine client’s guidelines, technical possibilities as well as the environmental issues. Engineering and interior design solutions that we deliver are usually born after a collaborative process.</p>
+                        </div>
+                        <div class="about_icons display_flex">
+                            <div class="about_icon">
+                                <div><i class="fa-solid fa-building"></i></div>
+                                <div>
+                                    <a href="">ARCHITECTURE</a>
+                                </div>
+                            </div>
+                            <div class="about_icon">
+                                <div><i class="fa-solid fa-pen-nib"></i></i></div>
+                                <div>
+                                    <a href="">INTERIORS</a>
+                                </div>
+                            </div>
+                            <div class="about_icon">
+                                <div><i class="fa-solid fa-ruler-vertical"></i></div>
+                                <div>
+                                    <a href="">PLANNING</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="about_text about_right position_relative">
+                <div class="position_absolute right100 jscode " style="padding: 0 0 0 120px;">
+                    <div class="about_17">
+                        <span>17</span>
+                    </div>
+                    <div class="about_years">
+                        <h2>years</h2>
+                        <h5>OF SUCCESSFUL WORK
+                            IN THE MARKET</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="sectionJs services center paddingBottom " >
+            <div class="about_text about_left ">
+                <div class="position_relative">
+                    <div>
+                        <h6 class="color_yel">OUR SERVICES</h6>
+                    </div>
+                    <div>
+                        <h2>Construction <br> Solutions</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="display_flex padding-top" >
+                    <div class="servicesLeft position_relative" style="width: 50%;">
+                        <div class="position_absolute left100 jscode">
+                            <img src="img/index-img-01-585x585.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="servicesRight position_relative" style="width: 50%;">
+                        <div class="position_absolute right100 jscode">
+                            <div class="servicesRightTop">
+                                <p>The first thing we do is meeting with our clients and talk through their goals on a future project. During this meeting, feel free to communicate your ideas and ask lots of questions. This stage is highly decisive as you can evaluate the work of your potential architect by browsing their portfolio.</p>
+                            </div>
+                            <div class="servicesRightbutton">
+                                <p>
+                                    We focus on the problem, the question and the solution. And we always think ahead.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="Construction jsopacy display_flex " style = "padding-top: 608px;">
+                <div class="ConstructionMin">
+                    <div class="ConstructionMinMin">
+                        <div>
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <a href="">Construction Services</a>
+                        <p>
+                            Our customers love
+                            the pace/quality tempo
+                            that we show during each
+                            of the principal construction
+                            processes! We're comfortable
+                            with any idea of our clients.
+                        </p>
+                    </div>
+                </div>
+                <div class="ConstructionMin">
+                    <div class="ConstructionMinMin">
+                        <div>
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <a href="">Construction Management</a>
+                        <p>
+                            If a project is not too complex,
+                            we may hire a designer-builder type
+                            of contractor, to make the longevity of the
+                            construction shorter.
+                        </p>
+                    </div>
+                </div>
+                <div class="ConstructionMin">
+                    <div class="ConstructionMinMin">
+                        <div>
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <a href="">Design-Build</a>
+                        <p>
+                            Our project management is
+                            essential. We're using the
+                            most time and iterations efficient
+                            life cycles methods for that to
+                            complete all the projects on time.
+                        </p>
+                    </div>
+                </div>
+                <div class="ConstructionMin">
+                    <div class="ConstructionMinMin">
+                        <div>
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <a href="">General Contracting</a>
+                        <p>
+                            We have a long list
+                            of professional contractors,
+                            whom our engineers and architects enjoy
+                            to work with on a majority of our
+                            construction projects!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <section id="project" class="sectionJs services "  >
+        <div id="projectjs" class="display_flex">
+            <div class="projectSection position_relative" style="background-image: url(img/123.jpg);">
+                <div class="projectSectionBack">
+                    <h5>Hangzhou,China</h5>
+                    <h6>Project Management</h6>
+                </div>
+                <div class="boll position_absolute"><i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="projectSection  position_relative" style="background-image: url(img/1234.jpg);">
+                <div class="projectSectionBack">
+                    <h5>Los Angeles, United States</h5>
+                    <h6>Project Meneger</h6>
+                </div>
+                <div class="boll position_absolute"><i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="projectSection  position_relative" style="background-image: url(img/12345.jpg);">
+                <div class="projectSectionBack">
+                    <h5>Montreal, Canada</h5>
+                    <h6>Project Meneger</h6>
+                </div>
+                <div class="boll position_absolute"><i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="projectSection  position_relative" style="background-image: url(img/123456.jpg);">
+                <div class="projectSectionBack">
+                    <h5>Reggio Emilia, Italy</h5>
+                    <h6>Project Meneger</h6>
+                </div>
+                <div class="boll position_absolute"><i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+        <div class="head_button" style="text-align: center; color: black; padding: 10px 0;"><button  style="color: black; ">View Project <i class="fa-solid fa-chevron-right"></i></button></div>
+    </div>
+    </section>
+    <section id="team" class="sectionJs team center paddingBottom">
+        <div class="about_text about_left ">
+            <div>
+                <h6 class="color_yel" >OUR TEAM</h6>
+            </div>
+            <div>
+                <h2>Meet our <br>
+                    team members
+                </h2>
+            </div>
+        </div>
+        <div class="personal display_flex position_relative">
+            <div class="personalLeft position_relative">
+                <div class="position_absolute">
+                    <div class="position_relative">
+                        <img src="img/21.jpg" alt="">
+                        <div class="position_absolute personalText">
+                            <div>
+                                <h5>Steven Hodges</h5>
+                            </div>
+                            <div>
+                                <h6>FOUNDER / ARCHITECT</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="position_relative">
+                        <img src="img/2121.jpg" alt="">
+                        <div class="position_absolute personalText">
+                            <div>
+                                <h5>Steven Hodges</h5>
+                            </div>
+                            <div>
+                                <h6>FOUNDER / ARCHITECT</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="personalRight  position_absolute">
+                <div  class="position_relative">
+                    <img src="img/212121.jpg" alt="">
+                    <div class="position_absolute personalText">
+                        <div>
+                            <h5>Steven Hodges</h5>
+                        </div>
+                        <div>
+                            <h6>FOUNDER / ARCHITECT</h6>
+                        </div>
+                    </div>
+                </div>
+                <div  class="position_relative">
+                    <img src="img/21212121.jpg" alt="">
+                    <div class="position_absolute personalText">
+                        <div>
+                            <h5>Steven Hodges</h5>
+                        </div>
+                        <div>
+                            <h6>FOUNDER / ARCHITECT</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="sectionJs">
+        <div class='contactText padding-top'>
+            <div>
+                <h6 class="color_yel" >CONTACT OUR TEAM</h6>
+            </div>
+            <div>
+                <h2>Get in Touch
+                </h2>
+            </div>
+            <div>
+                <p>Looking forward to building your own residential or commercial property? Feel free to contact us using the form below to discuss additional details of your project with our managers so that our team could get started with your project right away.</p>
+            </div>
+            <form action="" class="form">
+                <div class="inputDiv">
+                    <h6>Name</h6>
+                    <input type="text" value="Type your name here">
+                </div>
+                <div class="inputDiv">
+                    <h6>Name</h6>
+                    <input type="text" value="Type your name here">
+                </div>
+                <div class="inputDiv">
+                    <h6>Name</h6>
+                    <input type="text" value="Type your name here">
+                </div>
+                <div class="head_button" style="text-align: center; color: black; padding: 10px 0;">
+                    <button  style="color: black; ">Send <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="get">
+            <div class="getText center display_flex">
+                <div>
+                    <div>
+                        <h3>
+                            Construction of Any Complexity
+                        </h3>
+                    </div>
+                    <div>
+                        <h6>
+                            TRUST OUR TEAM WITH YOUR NEXT PROJECT
+                        </h6>
+                    </div>
+                </div>
+                <div>
+                    <div class="head_button" style="text-align: center; padding: 10px 0;">
+                        <button>Send <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="our">
+            <div>
+                <h6 class="color_yel" >OUR CLIENTS</h6>
+            </div>
+            <div style="padding-bottom: 70px;">
+                <h2 class="ourH2">We Work Worldwide
+                </h2>
+            </div>
+            <div class="ourBack center">
+            </div>
+        </div>
+</section>
+<footer class="display_flex position_relative">
+    <div class="footerBack display_flex position_absolute">
+        <span>c</span>
+        <span style="transform: rotate(180deg);">i</span>
+        <span>t</span>
+        <span>y</span>
+        <span>s</span>
+        <span>c</span>
+        <span>a</span>
+        <span>p</span>
+        <span>e</span>
+    </div>
+    <div class="footerLeft center position_relative">
+        <div class="footerContacts ">
+            <div>
+                <h2 class="ourH2">We Work Worldwide
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="footerRight position_absolute" >
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1523.7152922525959!2d44.47547035817998!3d40.199483909770656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd142295fa4b%3A0x4c0048923a8c2192!2sIT%20Park%20Business%20Center!5e0!3m2!1sru!2sam!4v1717959000718!5m2!1sru!2sam" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</footer>
+    <script src="https://kit.fontawesome.com/b7b506a085.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
